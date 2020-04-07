@@ -1,0 +1,9 @@
+@charset "UTF-8";
+
+// Structure taken from ITCSS (https://www.hongkiat.com/blog/inverted-triangle-css-web-development/)
+@import "settings";
+@import "mixins";
+
+// Generic
+@import "generic/normalize";
+@import "generic/generic";

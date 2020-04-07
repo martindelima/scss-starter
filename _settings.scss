@@ -1,0 +1,7 @@
+$default-font-size: 16px;
+
+$breakpoints: (
+	medium: 768px / $default-font-size * 1em,
+	large: 992px / $default-font-size * 1em,
+	xlarge: 992px / $default-font-size * 1em
+);

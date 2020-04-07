@@ -1,0 +1,29 @@
+// 1. Change `box-sizing` to `border-box` (via https://css-tricks.com/box-sizing/)
+// 2. Apply percentage-based default font size
+html {
+	box-sizing: border-box; // 1
+	font-size: $default-font-size / 16px * 100%; // 2
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: inherit; // 1
+}
+
+body {
+  // font-family:;
+  // font-size:;
+  // line-height:;
+  // color:;
+  // background-color:;
+}
+
+// Set good hyphenation defaults (via https://clagnut.com/blog/2395)
+p {
+  hyphens: auto;
+  hyphenate-limit-chars: 6 3 3;
+  hyphenate-limit-lines: 2;
+  hyphenate-limit-last: always;
+  hyphenate-limit-zone: 8%;
+}

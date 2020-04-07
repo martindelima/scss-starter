@@ -1,0 +1,51 @@
+// Breakpoint ------------------------------------------------------------------
+//
+//  Requires: _settings.scss
+//
+//  Usage:
+//    @include breakpoint($breakpoint) {
+//      <styles>
+//    }
+//------------------------------------------------------------------------------
+
+@mixin breakpoint($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media (min-width: #{map-get($breakpoints, $breakpoint)}) {
+      @content;
+    }
+  } @else {
+    @media (min-width: $breakpoint) {
+      @content;
+    }
+  }
+}
+
+// Link Colors -----------------------------------------------------------------
+//
+//  Usage:
+//    @include link-colors($color1, $color2);
+//------------------------------------------------------------------------------
+
+@mixin link-colors($default, $activated: false) {
+  color: $default;
+  &:link,
+  &:visited,
+  &:focus {
+    color: $default;
+    fill: $default;
+  }
+
+  @if $activated {
+    &:hover,
+    &:active {
+      color: $activated;
+      fill: $activated;
+    }
+  } @else {
+    &:hover,
+    &:active {
+      color: $default;
+      fill: $default;
+    }
+  }
+}
